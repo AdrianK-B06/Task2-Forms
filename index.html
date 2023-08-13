@@ -5,53 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x- icon">
+    <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x-icon">
 </head>
 
 <body>
-
-    <h2>Contact Us</h2>
+    <header>
+        <h2>Contact Us</h2>
+    </header>
     
-    <form action="/submit" method="post">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required placeholder="Your name."><br><br>
-      
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required placeholder="Your Email."><br><br>
-      
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" cols="30" 
-      required placeholder="Write a message here."></textarea><br><br>
-      
-      <label for="gender">Gender:</label>
-      
-      <input type="radio" id="male" name="gender" value="male">
-      <label for="male">Male</label>
+        <form action="/submit" method="post">
+            <div class="personalia">
+                <fieldset>
+                    <legend>Personalia:</legend>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required placeholder="Your name"><br><br>
 
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="pwd" name="pwd" minlength="5" required placeholder="Enter your password"><br><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
+                </fieldset>
+            </div>
 
-      <input type="radio" id="other" name="gender" value="other">
-      <label for="other">Other</label><br><br>
-      
-      <label for="subscribe">Subscribe to Newsletter:</label>
-      <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
-      
-      <label for="country">Country:</label>
-      <select id="country" name="country">
-        <option value="Norway">Norway</option>
-        <option value="Sweden">Sweden</option>
-        <option value="Denmark">Denmark</option>
-        <option value="uk">United Kingdom</option>
-        <option value="other">Other</option>
-      </select><br><br>
-      
-      <label for="upload">Upload File:</label>
-      <input type="file" id="upload" name="upload"><br><br>
-      
-      <input type="submit" value="Submit">
+        
+            <div class="info"> 
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30" 
+                required placeholder="Write a message here."></textarea><br><br>
+                
+                <label for="gender">Gender:</label>
+                
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
 
-    </form>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+
+                <label for="birthdate">Choose Birthdate:</label><br>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+
+                <label for="favoriteColor">Your Favourite Color:</label><br>
+                <input type="color" id="Color" name="favoriteColor"><br><br>
+                
+                <label for="subscribe">Subscribe to Newsletter:</label><br>
+                <label for="yes">Yes</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="no">No</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="no"><br><br>
+                
+                <label for="country">Country:</label><br>
+                <select id="country" name="country">
+                    <option value="choose" disabled selected>-Choose a country-</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="upload">Add your home page:</label><br>
+                <input type="url" id="homepage" name="homepage" placeholder="Optional"><br><br>
+                
+                <label for="upload">Upload File:</label><br>
+                <input type="file" id="upload" name="upload"><br><br>
+                
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </form>
     
     </body>
 </html>
